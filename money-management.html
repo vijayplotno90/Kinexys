@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Management - Kinexys Operations Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><div class="sidebar-logo-icon">K</div><div><div class="sidebar-logo-text">Kinexys</div><div class="sidebar-logo-subtitle">Operations Portal</div></div></div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+        <a href="accounts.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Accounts</a>
+        <a href="transactions.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Transactions</a>
+        <a href="reconciliation.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Reconciliation</a>
+        <a href="money-management.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Money Management</a>
+        <a href="tasks.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Tasks</a>
+        <a href="reports.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Reports</a>
+        <a href="notifications.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>Notifications</a>
+        <a href="historical.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Historical Data</a>
+      </nav>
+      <div class="sidebar-user"><div class="user-avatar">PS</div><div class="user-info"><div class="user-name">Priya Sharma</div><div class="user-role">Ops Lead</div></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="header"><div class="header-left"><div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input type="text" placeholder="Search transfers..."></div></div></header>
+      <div class="page-content">
+        <div class="page-header"><h1 class="page-title">Money Management</h1><p class="page-subtitle">Funds transfer and tracking</p></div>
+        <div class="grid-1-2">
+          <div class="card">
+            <h3 class="card-title mb-4">Initiate Transfer</h3>
+            <div class="steps mb-6"><div class="step active">1</div><div class="step-line"></div><div class="step">2</div><div class="step-line"></div><div class="step">3</div></div>
+            <div class="step-content" style="display:block;">
+              <div class="form-group"><label class="form-label">Source Account</label><select class="form-select"><option>Select source account</option><option>Tata Steel Ltd - INR</option><option>Reliance Industries - INR</option><option>Infosys Ltd - INR</option></select></div>
+              <div class="form-group"><label class="form-label">Destination Account</label><select class="form-select"><option>Select destination account</option><option>HDFC Bank - INR</option><option>ICICI Bank - INR</option><option>Wipro Technologies - INR</option></select></div>
+              <button class="btn btn-primary" style="width:100%" onclick="nextStep()">Continue →</button>
+            </div>
+            <div class="step-content">
+              <div class="form-group"><label class="form-label">Amount</label><div class="flex gap-2"><input type="number" class="form-input" placeholder="0.00" style="flex:1"><select class="form-select" style="width:100px"><option>INR</option><option>USD</option><option>EUR</option></select></div></div>
+              <div class="form-group"><label class="form-label">Justification (Required)</label><textarea class="form-input" rows="3" placeholder="Provide business reason..."></textarea></div>
+              <div class="flex gap-2"><button class="btn btn-secondary" style="flex:1" onclick="prevStep()">Back</button><button class="btn btn-primary" style="flex:1" onclick="nextStep()">Review</button></div>
+            </div>
+            <div class="step-content">
+              <div style="background:var(--background);padding:var(--space-4);border-radius:var(--radius-md);margin-bottom:var(--space-4)"><div class="flex justify-between text-sm mb-2"><span class="text-muted">From</span><span class="font-medium">Tata Steel Ltd</span></div><div class="flex justify-between text-sm mb-2"><span class="text-muted">To</span><span class="font-medium">HDFC Bank</span></div><div class="flex justify-between text-sm"><span class="text-muted">Amount</span><span class="font-medium">₹2,50,00,000</span></div></div>
+              <div class="alert-banner warning mb-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span class="text-sm">This transfer requires checker approval</span></div>
+              <div class="flex gap-2"><button class="btn btn-secondary" style="flex:1" onclick="prevStep()">Back</button><button class="btn btn-accent" style="flex:1" onclick="setStep(1)">Submit for Approval</button></div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-3 mb-6">
+              <div class="metric-card"><div class="metric-card-header"><span class="metric-card-label">Pending Approval</span></div><div class="metric-card-value text-warning">1</div></div>
+              <div class="metric-card"><div class="metric-card-header"><span class="metric-card-label">Completed Today</span></div><div class="metric-card-value text-success">1</div></div>
+              <div class="metric-card"><div class="metric-card-header"><span class="metric-card-label">Today's Volume</span></div><div class="metric-card-value">₹10.5 Cr</div></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><h3 class="card-title">Recent Transfers</h3></div>
+              <div class="transfer-item"><div class="transfer-info"><div class="transfer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div class="transfer-details"><h4>Tata Steel → Reliance Industries</h4><p>TRF-2024-001 · By Priya Sharma · 10 min ago</p></div></div><div class="transfer-right"><div class="transfer-amount">₹2.5 Cr</div><span class="badge warning">Pending</span></div></div>
+              <div class="transfer-item"><div class="transfer-info"><div class="transfer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div class="transfer-details"><h4>HDFC Bank → ICICI Bank</h4><p>TRF-2024-003 · By Vikram Singh · 2 hours ago</p></div></div><div class="transfer-right"><div class="transfer-amount">₹5 Cr</div><span class="badge success">Completed</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

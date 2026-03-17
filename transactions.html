@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions - Kinexys Operations Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">K</div>
+        <div>
+          <div class="sidebar-logo-text">Kinexys</div>
+          <div class="sidebar-logo-subtitle">Operations Portal</div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Accounts
+        </a>
+        <a href="transactions.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Transactions
+        </a>
+        <a href="reconciliation.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Reconciliation
+        </a>
+        <a href="money-management.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Money Management
+        </a>
+        <a href="tasks.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Tasks
+        </a>
+        <a href="reports.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Reports
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Notifications
+        </a>
+        <a href="historical.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Historical Data
+        </a>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-avatar">PS</div>
+        <div class="user-info">
+          <div class="user-name">Priya Sharma</div>
+          <div class="user-role">Ops Lead</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search by transaction ID, participant, reference..." class="search-input" data-table="txn-table">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="header-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Today
+          </button>
+          <button class="header-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Filters
+          </button>
+          <button class="btn btn-primary btn-sm">Export</button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <h1 class="page-title">Transactions</h1>
+          <p class="page-subtitle">Investigation workbench • Real-time transaction tracking</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid-4 mb-6">
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              <span class="metric-card-label">Today's Total</span>
+            </div>
+            <div class="metric-card-value">14,328</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span class="metric-card-label">Successful</span>
+            </div>
+            <div class="metric-card-value text-success">14,243</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="metric-card-label">Pending</span>
+            </div>
+            <div class="metric-card-value text-warning">34</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <span class="metric-card-label">Failed</span>
+            </div>
+            <div class="metric-card-value text-error">51</div>
+          </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="card">
+          <table class="data-table" id="txn-table">
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th style="text-align: right;">Amount</th>
+                <th>Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="handleRowClick('transaction', 'TXN-001')">
+                <td class="mono text-accent">TXN-2024-001234</td>
+                <td><span class="badge neutral">Payment</span></td>
+                <td class="font-medium">Tata Steel Ltd</td>
+                <td class="font-medium">Reliance Industries</td>
+                <td class="mono text-right">₹2,50,00,000</td>
+                <td class="text-muted">10:42 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-002')">
+                <td class="mono text-accent">TXN-2024-001235</td>
+                <td><span class="badge neutral">Settlement</span></td>
+                <td class="font-medium">HDFC Bank</td>
+                <td class="font-medium">ICICI Bank</td>
+                <td class="mono text-right">₹5,00,00,000</td>
+                <td class="text-muted">10:38 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-003')">
+                <td class="mono text-accent">TXN-2024-001236</td>
+                <td><span class="badge neutral">Transfer</span></td>
+                <td class="font-medium">Infosys Ltd</td>
+                <td class="font-medium">Wipro Technologies</td>
+                <td class="mono text-right">₹1,80,00,000</td>
+                <td class="text-muted">10:35 AM</td>
+                <td><span class="badge warning">Pending</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-004')">
+                <td class="mono text-accent">TXN-2024-001237</td>
+                <td><span class="badge neutral">Payment</span></td>
+                <td class="font-medium">Mahindra Finance</td>
+                <td class="font-medium">Bajaj Holdings</td>
+                <td class="mono text-right">₹95,00,000</td>
+                <td class="text-muted">10:32 AM</td>
+                <td><span class="badge error">Failed</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-005')">
+                <td class="mono text-accent">TXN-2024-001238</td>
+                <td><span class="badge neutral">Settlement</span></td>
+                <td class="font-medium">Adani Enterprises</td>
+                <td class="font-medium">Larsen & Toubro</td>
+                <td class="mono text-right">₹3,20,00,000</td>
+                <td class="text-muted">10:28 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-006')">
+                <td class="mono text-accent">TXN-2024-001239</td>
+                <td><span class="badge neutral">Transfer</span></td>
+                <td class="font-medium">Kotak Bank</td>
+                <td class="font-medium">Axis Bank</td>
+                <td class="mono text-right">₹8,50,00,000</td>
+                <td class="text-muted">10:25 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-007')">
+                <td class="mono text-accent">TXN-2024-001240</td>
+                <td><span class="badge neutral">Payment</span></td>
+                <td class="font-medium">Hindustan Unilever</td>
+                <td class="font-medium">ITC Ltd</td>
+                <td class="mono text-right">₹1,45,00,000</td>
+                <td class="text-muted">10:22 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+              <tr onclick="handleRowClick('transaction', 'TXN-008')">
+                <td class="mono text-accent">TXN-2024-001241</td>
+                <td><span class="badge neutral">Settlement</span></td>
+                <td class="font-medium">State Bank</td>
+                <td class="font-medium">Punjab National Bank</td>
+                <td class="mono text-right">₹12,00,00,000</td>
+                <td class="text-muted">10:18 AM</td>
+                <td><span class="badge success">Success</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-between items-center" style="padding: var(--space-4); border-top: 1px solid var(--border);">
+            <span class="text-sm text-muted">Showing 8 of 14,328 transactions</span>
+            <div class="flex gap-2">
+              <button class="btn btn-secondary btn-sm" disabled>Previous</button>
+              <button class="btn btn-secondary btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

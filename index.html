@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Kinexys Operations Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">K</div>
+        <div>
+          <div class="sidebar-logo-text">Kinexys</div>
+          <div class="sidebar-logo-subtitle">Operations Portal</div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Accounts
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Transactions
+        </a>
+        <a href="reconciliation.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Reconciliation
+        </a>
+        <a href="money-management.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Money Management
+        </a>
+        <a href="tasks.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Tasks
+        </a>
+        <a href="reports.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Reports
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Notifications
+        </a>
+        <a href="historical.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Historical Data
+        </a>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-avatar">PS</div>
+        <div class="user-info">
+          <div class="user-name">Priya Sharma</div>
+          <div class="user-role">Ops Lead</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search transactions, accounts, references...">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="header-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Today
+          </button>
+          <div class="notification-badge">
+            <button class="header-btn btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </button>
+            <span class="badge">3</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-subtitle">Operations Control Tower • Last updated: 10:45 AM</p>
+        </div>
+
+        <!-- Health Strip -->
+        <div class="health-strip">
+          <div class="health-item success">
+            <div class="health-indicator success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="health-label">System Status</div>
+              <div class="health-value">Operational</div>
+            </div>
+          </div>
+          <div class="health-item warning">
+            <div class="health-indicator warning">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div class="health-label">Open Issues</div>
+              <div class="health-value">3 Active</div>
+            </div>
+          </div>
+          <div class="health-item success">
+            <div class="health-indicator success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="health-label">Processing Time</div>
+              <div class="health-value">&lt; 2 sec</div>
+            </div>
+          </div>
+          <div class="health-item success">
+            <div class="health-indicator success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="health-label">Connected Clients</div>
+              <div class="health-value">42 Active</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Grid -->
+        <div class="grid-4 mb-6">
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              <span class="metric-card-label">Today's Transactions</span>
+            </div>
+            <div class="metric-card-value">14,328</div>
+            <div class="metric-card-trend up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              +12.4% vs yesterday
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span class="metric-card-label">Total Value Processed</span>
+            </div>
+            <div class="metric-card-value text-success">₹847 Cr</div>
+            <div class="metric-card-trend up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              +8.2% vs yesterday
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span class="metric-card-label">Success Rate</span>
+            </div>
+            <div class="metric-card-value text-success">99.4%</div>
+            <div class="metric-card-trend up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              +0.1%
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span class="metric-card-label">Open Exceptions</span>
+            </div>
+            <div class="metric-card-value text-warning">51</div>
+            <div class="metric-card-trend down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+              -5 from yesterday
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid-2-1 mb-6">
+          <!-- Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3 class="card-title">Transaction Volume</h3>
+              <div class="flex gap-2">
+                <button class="btn btn-sm btn-secondary">Count</button>
+                <button class="btn btn-sm btn-primary">Value</button>
+              </div>
+            </div>
+            <div class="chart-placeholder">
+              <div class="chart-bar" data-height="120" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="180" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="150" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="200" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="170" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="220" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="190" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="210" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="240" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="180" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="160" style="height: 0px;"></div>
+              <div class="chart-bar" data-height="140" style="height: 0px;"></div>
+            </div>
+            <div class="flex justify-between text-xs text-muted mt-4">
+              <span>6 AM</span>
+              <span>9 AM</span>
+              <span>12 PM</span>
+              <span>3 PM</span>
+            </div>
+          </div>
+
+          <!-- Workload Queue -->
+          <div class="card">
+            <div class="card-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+              <h3 class="card-title">Workload Queue</h3>
+            </div>
+            <div>
+              <div class="workload-item">
+                <div>
+                  <div class="workload-label">Pending Tasks</div>
+                  <div class="workload-description">Items waiting to be processed</div>
+                </div>
+                <div class="workload-count text-warning">24</div>
+              </div>
+              <div class="workload-item">
+                <div>
+                  <div class="workload-label">Awaiting Approval</div>
+                  <div class="workload-description">Items in checker queue</div>
+                </div>
+                <div class="workload-count text-accent">12</div>
+              </div>
+              <div class="workload-item">
+                <div>
+                  <div class="workload-label">Overdue Items</div>
+                  <div class="workload-description">Past SLA deadline</div>
+                </div>
+                <div class="workload-count text-error">3</div>
+              </div>
+              <div class="workload-item">
+                <div>
+                  <div class="workload-label">SLA Breach Risk</div>
+                  <div class="workload-description">Approaching deadline</div>
+                </div>
+                <div class="workload-count text-warning">8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exceptions Table -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Top Exceptions Today</h3>
+            <a href="transactions.html" class="btn btn-sm btn-secondary">View All</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Reason</th>
+                <th>Count</th>
+                <th>Impacted Value</th>
+                <th>Top Participant</th>
+                <th>Trend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="handleRowClick('exception', 'validation')">
+                <td><span class="badge error">Validation Error</span></td>
+                <td class="font-medium">18</td>
+                <td class="mono">₹12.5 Cr</td>
+                <td>Tata Steel Ltd</td>
+                <td><span class="text-error">↑ 5</span></td>
+              </tr>
+              <tr onclick="handleRowClick('exception', 'timeout')">
+                <td><span class="badge warning">Timeout</span></td>
+                <td class="font-medium">12</td>
+                <td class="mono">₹8.2 Cr</td>
+                <td>HDFC Bank</td>
+                <td><span class="text-success">↓ 3</span></td>
+              </tr>
+              <tr onclick="handleRowClick('exception', 'insufficient')">
+                <td><span class="badge warning">Insufficient Funds</span></td>
+                <td class="font-medium">9</td>
+                <td class="mono">₹5.8 Cr</td>
+                <td>Mahindra Finance</td>
+                <td><span class="text-muted">—</span></td>
+              </tr>
+              <tr onclick="handleRowClick('exception', 'duplicate')">
+                <td><span class="badge neutral">Duplicate</span></td>
+                <td class="font-medium">7</td>
+                <td class="mono">₹3.2 Cr</td>
+                <td>Reliance Industries</td>
+                <td><span class="text-success">↓ 2</span></td>
+              </tr>
+              <tr onclick="handleRowClick('exception', 'network')">
+                <td><span class="badge error">Network Error</span></td>
+                <td class="font-medium">5</td>
+                <td class="mono">₹2.1 Cr</td>
+                <td>Infosys Ltd</td>
+                <td><span class="text-error">↑ 2</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

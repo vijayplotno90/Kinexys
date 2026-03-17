@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounts - Kinexys Operations Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">K</div>
+        <div>
+          <div class="sidebar-logo-text">Kinexys</div>
+          <div class="sidebar-logo-subtitle">Operations Portal</div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a href="accounts.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Accounts
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          Transactions
+        </a>
+        <a href="reconciliation.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Reconciliation
+        </a>
+        <a href="money-management.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Money Management
+        </a>
+        <a href="tasks.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Tasks
+        </a>
+        <a href="reports.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Reports
+        </a>
+        <a href="notifications.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          Notifications
+        </a>
+        <a href="historical.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Historical Data
+        </a>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-avatar">PS</div>
+        <div class="user-info">
+          <div class="user-name">Priya Sharma</div>
+          <div class="user-role">Ops Lead</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search accounts by name, ID, participant..." class="search-input" data-table="accounts-table">
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="header-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Filters
+          </button>
+          <button class="btn btn-primary btn-sm">Export</button>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <div class="page-header">
+          <h1 class="page-title">Accounts</h1>
+          <p class="page-subtitle">Manage participant accounts and balances</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid-4 mb-6">
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span class="metric-card-label">Total Accounts</span>
+            </div>
+            <div class="metric-card-value">248</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span class="metric-card-label">Active</span>
+            </div>
+            <div class="metric-card-value text-success">235</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span class="metric-card-label">Total Balance</span>
+            </div>
+            <div class="metric-card-value">₹4,520 Cr</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              <span class="metric-card-label">Today's Activity</span>
+            </div>
+            <div class="metric-card-value">1,847</div>
+          </div>
+        </div>
+
+        <!-- Accounts Table -->
+        <div class="card">
+          <table class="data-table" id="accounts-table">
+            <thead>
+              <tr>
+                <th>Account ID</th>
+                <th>Participant</th>
+                <th>Currency</th>
+                <th style="text-align: right;">Current Balance</th>
+                <th style="text-align: right;">Available Balance</th>
+                <th>Last Activity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr onclick="handleRowClick('account', 'ACC-001')">
+                <td class="mono text-accent">ACC-2024-001</td>
+                <td class="font-medium">Tata Steel Ltd</td>
+                <td>INR</td>
+                <td class="mono text-right">₹45,00,00,000</td>
+                <td class="mono text-right">₹42,50,00,000</td>
+                <td class="text-muted">2 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-002')">
+                <td class="mono text-accent">ACC-2024-002</td>
+                <td class="font-medium">Reliance Industries</td>
+                <td>INR</td>
+                <td class="mono text-right">₹1,25,00,00,000</td>
+                <td class="mono text-right">₹1,20,00,00,000</td>
+                <td class="text-muted">5 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-003')">
+                <td class="mono text-accent">ACC-2024-003</td>
+                <td class="font-medium">Infosys Ltd</td>
+                <td>INR</td>
+                <td class="mono text-right">₹28,50,00,000</td>
+                <td class="mono text-right">₹28,50,00,000</td>
+                <td class="text-muted">12 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-004')">
+                <td class="mono text-accent">ACC-2024-004</td>
+                <td class="font-medium">HDFC Bank</td>
+                <td>INR</td>
+                <td class="mono text-right">₹2,50,00,00,000</td>
+                <td class="mono text-right">₹2,45,00,00,000</td>
+                <td class="text-muted">1 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-005')">
+                <td class="mono text-accent">ACC-2024-005</td>
+                <td class="font-medium">Wipro Technologies</td>
+                <td>INR</td>
+                <td class="mono text-right">₹18,75,00,000</td>
+                <td class="mono text-right">₹18,75,00,000</td>
+                <td class="text-muted">30 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-006')">
+                <td class="mono text-accent">ACC-2024-006</td>
+                <td class="font-medium">Mahindra Finance</td>
+                <td>INR</td>
+                <td class="mono text-right">₹35,20,00,000</td>
+                <td class="mono text-right">₹32,00,00,000</td>
+                <td class="text-muted">45 min ago</td>
+                <td><span class="badge warning">On Hold</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-007')">
+                <td class="mono text-accent">ACC-2024-007</td>
+                <td class="font-medium">ICICI Bank</td>
+                <td>INR</td>
+                <td class="mono text-right">₹1,85,00,00,000</td>
+                <td class="mono text-right">₹1,80,00,00,000</td>
+                <td class="text-muted">3 min ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+              <tr onclick="handleRowClick('account', 'ACC-008')">
+                <td class="mono text-accent">ACC-2024-008</td>
+                <td class="font-medium">Bajaj Holdings</td>
+                <td>INR</td>
+                <td class="mono text-right">₹22,40,00,000</td>
+                <td class="mono text-right">₹22,40,00,000</td>
+                <td class="text-muted">1 hour ago</td>
+                <td><span class="badge success">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-between items-center" style="padding: var(--space-4); border-top: 1px solid var(--border);">
+            <span class="text-sm text-muted">Showing 8 of 248 accounts</span>
+            <div class="flex gap-2">
+              <button class="btn btn-secondary btn-sm" disabled>Previous</button>
+              <button class="btn btn-secondary btn-sm">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
